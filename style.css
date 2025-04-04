@@ -1,28 +1,73 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
 }
 
 .container {
-  padding: 20px;
+    max-width: 600px;
+    padding: 20px;
 }
 
 h1 {
-  font-size: 3rem;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 p {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#countdown div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ff9800;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e68900;
 }
