@@ -1,73 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon - ROOHKARI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>We're Launching Soon!</h1>
+    <p><b>ROOHKARI</b> — Stay tuned for something amazing!</p>
 
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-}
+    <div id="countdown">
+      <div><span id="days">00</span>Days</div>
+      <div><span id="hours">00</span>Hours</div>
+      <div><span id="minutes">00</span>Minutes</div>
+      <div><span id="seconds">00</span>Seconds</div>
+    </div>
 
-.container {
-    max-width: 610px;
-    padding: 20px;
-}
+    <form id="subscribe-form">
+      <input type="email" placeholder="parth.suri@yahoo.com" required />
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-#countdown {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#countdown div {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-form {
-    margin-top: 20px;
-}
-
-input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 70%;
-    font-size: 1rem;
-}
-
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background: #ff9800;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #e68900;
-}
+  <script src="script.js"></script>
+</body>
+</html>
