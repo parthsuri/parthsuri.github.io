@@ -1,29 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon - ROOHKARI</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>We're Launching Soon!</h1>
-    <p><b>ROOHKARI</b> — Stay tuned for something amazing!</p>
+/* Fonts & Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background: linear-gradient(to right, #fff0f5, #ffe4e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    <div id="countdown">
-      <div><span id="days">00</span>Days</div>
-      <div><span id="hours">00</span>Hours</div>
-      <div><span id="minutes">00</span>Minutes</div>
-      <div><span id="seconds">00</span>Seconds</div>
-    </div>
+.overlay {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
 
-    <form id="subscribe-form">
-      <input type="email" placeholder="parth.suri@yahoo.com" required />
-      <button type="submit">Notify Me</button>
-    </form>
-  </div>
+.container {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 1s ease-in-out forwards;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #c2185b;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+#countdown div {
+  flex: 1 1 45%;
+  background: #ffffffcc;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#countdown span {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #c2185b;
+}
+
+#countdown label {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input[type="email"] {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #a3144c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #countdown div {
+    font-size: 1rem;
+  }
+}
