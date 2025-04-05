@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon - ROOHKARI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROOHKARI – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>We're Launching Soon!</h1>
-    <p><b>ROOHKARI</b> — Stay tuned for something amazing!</p>
+  <div class="overlay">
+    <div class="container">
+      <h1 class="fade-in">ROOHKARI</h1>
+      <p class="fade-in delay-1">Timeless Chikankari. Coming Soon.</p>
 
-    <div id="countdown">
-      <div><span id="days">00</span>Days</div>
-      <div><span id="hours">00</span>Hours</div>
-      <div><span id="minutes">00</span>Minutes</div>
-      <div><span id="seconds">00</span>Seconds</div>
+      <div id="countdown" class="fade-in delay-2">
+        <div><span id="days">00</span><label>Days</label></div>
+        <div><span id="hours">00</span><label>Hours</label></div>
+        <div><span id="minutes">00</span><label>Minutes</label></div>
+        <div><span id="seconds">00</span><label>Seconds</label></div>
+      </div>
+
+      <form id="subscribe-form" class="fade-in delay-3">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Notify Me</button>
+      </form>
     </div>
-
-    <form id="subscribe-form">
-      <input type="email" placeholder="parth.suri@yahoo.com" required />
-      <button type="submit">Notify Me</button>
-    </form>
   </div>
 
   <script src="script.js"></script>
