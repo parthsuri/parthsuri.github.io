@@ -4,108 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coming Soon - ROOHKARI</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #fff0f5, #ffe4e1);
-      color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .container {
-      max-width: 500px;
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      font-size: 2rem;
-      color: #c2185b;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    #countdown {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    #countdown div {
-      flex: 1 1 45%;
-      margin: 0.5rem;
-      padding: 1rem;
-      background: #f8f8f8;
-      border-radius: 10px;
-      font-size: 1rem;
-      color: #444;
-    }
-
-    #countdown span {
-      font-weight: bold;
-      font-size: 1.5rem;
-      display: block;
-      margin-bottom: 0.3rem;
-      color: #c2185b;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    input[type="email"] {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      padding: 0.75rem;
-      font-size: 1rem;
-      background-color: #c2185b;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #a3144c;
-    }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-      p {
-        font-size: 1.2rem;
-      }
-      #countdown div {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -125,29 +24,6 @@
     </form>
   </div>
 
-  <script>
-    const countdown = () => {
-      const launchDate = new Date(\"2025-05-01T00:00:00\").getTime(); // Set your launch date
-      const now = new Date().getTime();
-      const timeLeft = launchDate - now;
-
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-      const seconds = Math.floor((timeLeft / 1000) % 60);
-
-      document.getElementById(\"days\").innerText = days.toString().padStart(2, '0');
-      document.getElementById(\"hours\").innerText = hours.toString().padStart(2, '0');
-      document.getElementById(\"minutes\").innerText = minutes.toString().padStart(2, '0');
-      document.getElementById(\"seconds\").innerText = seconds.toString().padStart(2, '0');
-    };
-
-    setInterval(countdown, 1000);
-
-    document.getElementById(\"subscribe-form\").addEventListener(\"submit\", function(e) {
-      e.preventDefault();
-      alert(\"Thank you! We'll notify you when we launch.\");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
