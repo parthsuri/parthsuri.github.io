@@ -16,4 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("minutes").textContent = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         document.getElementById("seconds").textContent = Math.floor((timeLeft % (1000 * 60)) / 1000);
     }, 1000);
+
+    document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you! We'll notify you when we launch.");
+    });
 });
